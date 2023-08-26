@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Buscar Palabra</title>
+  </head>
+  <body>
+    <h1>Buscar Palabra</h1>
+    <form method="POST">
+      <label for="palabra">Palabra:</label>
+      <input type="text" id="palabra" name="palabra"><br><br>
+      <input type="submit" value="Buscar">
+    </form>
+    {% if documento %}
+      <p>Palabra: {{ documento.Palabra }}</p>
+      <p>Significado: {{ documento.Significado }}</p>
+    {% endif %}
+    {% if message %}
+      <p>{{ message }}</p>
+    {% endif %}
+    <br>
+    <a href="/">Volver al Inicio</a>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ver Palabras</title>
+  </head>
+  <body>
+    <h1>Ver Palabras</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Palabra</th>
+          <th>Significado</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for palabra in palabras %}
+          <tr>
+            <td>{{ palabra.Palabra }}</td>
+            <td>{{ palabra.Significado }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <a href="/">Volver al Inicio</a>
+  </body>
+</html>
